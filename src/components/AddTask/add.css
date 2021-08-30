@@ -14,3 +14,7 @@
   color: #eee;
   font-size: 18px;
 }
+.addBtnContainer {
+  flex: 1;
+  margin-left: 10px;
+}
