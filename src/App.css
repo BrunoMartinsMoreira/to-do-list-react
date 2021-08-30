@@ -1,10 +1,14 @@
 .container {
-  max-width: 600px;
-  min-width: 300px;
+  width: 50vw;
   margin: 30px auto;
   overflow: auto;
   min-height: 320px;
   padding: 30px;
   border: 2px solid rgb(28, 202, 28);
   border-radius: 10px;
+}
+@media (max-width: 800px) {
+  .container {
+    width: 70vw;
+  }
 }
