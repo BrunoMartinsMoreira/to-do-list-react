@@ -1,0 +1,16 @@
+.addContainer {
+  margin: 12px 0;
+  display: flex;
+  width: 100%;
+}
+.addInput {
+  outline: none;
+  height: 2rem;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: none;
+  flex: 2;
+  background: #555;
+  color: #eee;
+  font-size: 18px;
+}
