@@ -1,0 +1,21 @@
+.detailsContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #444;
+  margin: 15px 0;
+  padding: 7px 15px;
+  border-radius: 5px;
+}
+h2 {
+  color: rgb(28 202 28);
+  text-transform: capitalize;
+}
+p {
+  color: #fefefe;
+  padding: 10px 0;
+  font-size: 1.2rem;
+}
+.backBtn {
+  width: 30%;
+  margin-top: 10px;
+}

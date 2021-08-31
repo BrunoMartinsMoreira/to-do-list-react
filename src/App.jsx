@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import { BrowserRouter, Route } from 'react-router-dom';
 import Tasks from './components/TasksContainer';
 import AddTask from './components/AddTask';
+import TaskDetails from './components/TaskDetails';
+import Header from './components/Header';
 import './App.css';
 
 const App = () => {
@@ -45,12 +48,28 @@ const App = () => {
   };
 
   return (
-    <>
+    <BrowserRouter>
       <div className="container">
-        <AddTask handleTaskAddition={handleTaskAddition}/>
-        <Tasks tasks={tasks} handleTaskClick={handleTaskClick} handleTaskDeletion={handleTaskDeletion}/>
+        <Header/>
+        <Route 
+          path="/"
+          exact
+          render={()=>(
+            <>
+              <AddTask handleTaskAddition={handleTaskAddition}/>
+              <Tasks tasks={tasks} 
+                handleTaskClick={handleTaskClick} 
+                handleTaskDeletion={handleTaskDeletion}
+              />
+            </>
+          )}
+        />
+
+        <Route exact path="/:taskTitle" 
+          component={TaskDetails}
+        />
       </div>
-    </>
+    </BrowserRouter>
   );
 }
 
