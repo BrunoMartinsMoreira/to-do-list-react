@@ -29,9 +29,6 @@ const Task = ({ task, handleTaskClick, handleTaskDeletion }) => {
          </div>
 
       </div>
-   );
-
-  // return <section className="taskContainer"> <div>{task.title}</div> </section>);
-    
+   );    
 };
 export default Task;
